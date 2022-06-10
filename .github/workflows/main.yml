@@ -28,7 +28,16 @@ jobs:
         uses: actions/checkout@v3
         
       - name: check node -version
-        run: node -v
+        run: |
+          echo "print node version"
+          node -v 
+          echo "node update"
+          npm cache clean -f
+          npm install -g n
+          n stable
+          echo "print node version"
+          node -v 
+        
 
       # Performs a clean installation of all dependencies in the `package.json` file
       # For more information, see https://docs.npmjs.com/cli/ci.html
