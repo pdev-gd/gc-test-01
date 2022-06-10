@@ -29,8 +29,6 @@ jobs:
         
       - name: check node -version
         run: |
-          echo "print node version"
-          node -v 
           echo "node update"
           npm cache clean -f
           npm install -g n
@@ -42,7 +40,7 @@ jobs:
       # Performs a clean installation of all dependencies in the `package.json` file
       # For more information, see https://docs.npmjs.com/cli/ci.html
       - name: Install dependencies
-        run: npm i redis json
+        run: npm i redis
 
       - name: Connect to Redis
         # Runs a script that creates a Redis client, populates
