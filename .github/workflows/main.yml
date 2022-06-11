@@ -27,7 +27,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
         
-      - name: check node -version
+      - name: check node version
         run: |
           echo "node update"
           npm cache clean -f
